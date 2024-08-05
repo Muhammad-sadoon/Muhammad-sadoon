@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>button </title>
+</head>
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+.cantainer{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.display{
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 40%;
+  transition: all ease 1.5s;
+}
+.btn{
+  height: 100px;
+  width: 100px;
+  border: 2px solid black;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: cyan;
+  font-weight: 800;
+}
+.up{
+  position: absolute;
+  bottom: 5.5%;
+  right: 20%;
+  
+}
+.down {
+  position: absolute;
+  bottom: 0px;
+  right: 20%;
+
+}
+.right {
+  position: absolute;
+  bottom: 0%;
+  right: 10%;
+
+}
+.left {
+  position: absolute;
+  bottom: 0%;
+  right: 30%;
+
+}
+</style>
+
+<body>
+  <div class="cantainer">
+    <div class="back">
+      <div class="back-cloud">
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+      </div>
+      <div class="crows">
+        <img src="img/crow.png" alt="">
+      </div>
+      <div class="circle1">
+        <img src="img/sun.png" class="sun" alt="">
+      </div>
+      <div class="circle2">
+        <img src="img/moon.png" class="moon" alt="">
+      </div>
+    </div>
+    
+  </div>
+
+  <script src="script.js">
+  let dis = document.querySelector('.display');
+let up = document.querySelector('.up');
+let down = document.querySelector('.down');
+let left = document.querySelector('.left');
+let right = document.querySelector('.right');
+
+up.addEventListener('click',function () {
+  dis.style.transform = 'translateY(-200px)';
+})
+down.addEventListener('click',function () {
+  dis.style.transform = 'translateY(200px)';
+})
+left.addEventListener('click', function() {
+  dis.style.transform = 'translateX(-200px)';
+})
+right.addEventListener('click', function() {
+  dis.style.transform = 'translateX(200px)';
+})
+</script>
+</body>
+
+</html>
